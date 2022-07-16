@@ -13,7 +13,7 @@ O algoritmo foi desenvolvido em POO (Programação Orientada a Objeto, paradigma
 - [Python](https://www.python.org/)
 - [VSCode](https://code.visualstudio.com/)
 
-### :gear: <strong>Como executar:</strong>
+### <strong>Como executar:</strong>
 1º Clone o repositório abaixo:
 ```shell
 git clone https://github.com/lauramsromano/QUERO_DADOS.git
