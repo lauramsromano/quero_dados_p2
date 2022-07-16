@@ -7,7 +7,7 @@ O objetivo desse projeto é desenvolver um código para realizar uma pesquisa di
 O programa começa solicitando as informações de Idade e Gênero do candidato e, em seguida serão feitas 4 perguntas.
 Essas perguntas deverão ser respondidas com Sim, Não e Não Sei Responder. 
 
-O algorítimo foi desenvolvido em POO (Programação Orientada a Objeto, paradigma de programação baseado no conceito de Classes e Objetos.)
+O algoritmo foi desenvolvido em POO (Programação Orientada a Objeto, paradigma de programação baseado no conceito de Classes e Objetos.)
 
 ### :computer: <strong>Tecnologias utilizadas:</strong>
 - [Python](https://www.python.org/)
