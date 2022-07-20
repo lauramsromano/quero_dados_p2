@@ -35,7 +35,8 @@ class Entrevistador():
     def pergunta4(self):
         return  # resposta 4: Sim, Não, Não Sei
 
-    def pergunta5(self, resposta5):
+    # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não Sei".
+    def set_pergunta5(self, resposta5):
         if resposta5 == 1:
             self.resposta5  = "Sim"
             return self.resposta5
@@ -53,6 +54,15 @@ class Entrevistador():
     
     def pyToCSV(self, respostas):
         return #arquivo csv
+
+    def get_nome(self):
+        return self.nome
+    
+    def set_nomeRepetido(self, novoNome):
+        self.nome = novoNome
+        return self.nome
+    
+
     
     
     
