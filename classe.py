@@ -25,7 +25,7 @@ class Entrevistador():
     def dadosBasicos(self):
         return  # nome, idade, sexo
 
-    def pergunta1(self, resposta1):
+    def set_pergunta1(self, resposta1):
         if resposta1 == 1:
             self.resposta1 = "Sim"
             return self.resposta1
@@ -36,10 +36,10 @@ class Entrevistador():
             self.resposta1 = "Não sei responder"
             return self.resposta1
 
-    def pergunta2(self):
+    def set_pergunta2(self):
         return  # resposta 2: Sim, Não, Não Sei
 
-    def pergunta3(self, resposta3):
+    def set_pergunta3(self, resposta3):
         if resposta3 == 1:
             self.resposta3 = "Sim"
             return self.resposta3
@@ -50,10 +50,11 @@ class Entrevistador():
             self.resposta3 = "Não sei responder"
             return self.resposta3
 
-    def pergunta4(self):
+    def set_pergunta4(self):
         return  # resposta 4: Sim, Não, Não Sei
 
-    def pergunta5(self, resposta5):
+    # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não Sei".
+    def set_pergunta5(self, resposta5):
         if resposta5 == 1:
             self.resposta5 = "Sim"
             return self.resposta5
@@ -63,7 +64,23 @@ class Entrevistador():
         elif resposta5 == 3:
             self.resposta5 = "Não"
             return self.resposta5
+           
+    
+    def reunirRespostas(self, nome, idade, sexo, resposta1, resposta2, resposta3, resposta4, resposta5):
+        resposta = {nome : [idade, sexo, resposta1, resposta2, resposta3, resposta4, resposta5]}
+        return resposta
+    
+    def pyToCSV(self, respostas):
+        return #arquivo csv
 
+    def get_nome(self):
+        return self.nome
+    
+    # atribui um novo nome caso o nome inserido já conste como key em um dicionário. Evita sobreposição de dados.
+    def set_nomeRepetido(self, novoNome):
+        self.nome = novoNome
+        return self.nome
+    
     # Data e hora:
     def horaeData(self, data_hora_cadastro):
         self.data_hora_cadastro = data_hora_cadastro
