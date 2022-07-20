@@ -9,9 +9,7 @@ while classe.Entrevistador.desejaParticipar(aceite) == True:
     nome = input("Nome: ")
     idade = 19
     sexo = 'F'
-    resposta1 = 'a'
     resposta2 = 'b'
-    resposta3 = 'c'
     resposta4 = 'd'
 
     input1 = int(input(f'''Essa é uma pergunta teste. 

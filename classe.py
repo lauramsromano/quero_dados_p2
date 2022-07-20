@@ -81,7 +81,6 @@ class Entrevistador():
         self.nome = novoNome
         return self.nome
     
-
     # Data e hora:
     def horaeData(self, data_hora_cadastro):
         self.data_hora_cadastro = data_hora_cadastro
