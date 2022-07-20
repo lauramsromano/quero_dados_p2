@@ -76,6 +76,7 @@ class Entrevistador():
     def get_nome(self):
         return self.nome
     
+    # atribui um novo nome caso o nome inserido já conste como key em um dicionário. Evita sobreposição de dados.
     def set_nomeRepetido(self, novoNome):
         self.nome = novoNome
         return self.nome
