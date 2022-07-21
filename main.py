@@ -1,3 +1,4 @@
+from ast import Break
 import classe
 from datetime import datetime
 
@@ -6,8 +7,15 @@ respostas = {}
 
 while classe.Entrevistador.desejaParticipar(aceite) == True:
 
-    nome = input("Nome: ")
-    idade = 19
+    nome = str(input("Digite seu nome: ")) #não é necesário
+    idade = int(input('Digite sua idade: '))
+    if idade > 00:
+        sexo = int(input('Digite o número relacionado ao gênero no qual você se identifica: [1] Feminino\n [2] Não binário\n [3] Masculino\n'))
+
+    elif idade == 00: #mover para o final
+        print('Fim do questionário')
+        Break
+    
     sexo = 'F'
     resposta2 = 'b'
     resposta4 = 'd'
