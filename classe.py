@@ -22,8 +22,13 @@ class Entrevistador():
         elif aceite.upper == 'NÃO':
             return False
 
-    def dadosBasicos(self):
-        return  # nome, idade, sexo
+    def dadosBasicos(self, nome, idade, sexo):
+        self.nome = nome
+        self.idade = idade
+        self.sexo = sexo 
+        # return self.dadosBasicos
+
+        
 
     def set_pergunta1(self, resposta1):
         if resposta1 == 1:
