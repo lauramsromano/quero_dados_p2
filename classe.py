@@ -1,5 +1,4 @@
 import pandas as pd
-from datetime import datetime
 
 
 class Entrevistador():
@@ -25,10 +24,8 @@ class Entrevistador():
     def dadosBasicos(self, nome, idade, sexo):
         self.nome = nome
         self.idade = idade
-        self.sexo = sexo 
+        self.sexo = sexo
         # return self.dadosBasicos
-
-        
 
     def set_pergunta1(self, resposta1):
         if resposta1 == 1:
@@ -69,33 +66,46 @@ class Entrevistador():
         elif resposta5 == 3:
             self.resposta5 = "Não"
             return self.resposta5
-           
-    
+
     def reunirRespostas(self, nome, idade, sexo, resposta1, resposta2, resposta3, resposta4, resposta5):
-        resposta = {nome : [idade, sexo, resposta1, resposta2, resposta3, resposta4, resposta5]}
+        resposta = {nome: [idade, sexo, resposta1,
+                           resposta2, resposta3, resposta4, resposta5]}
         return resposta
-    
+
     def pyToCSV(self, respostas):
-        return #arquivo csv
+        return  # arquivo csv
 
     def get_nome(self):
         return self.nome
-    
+
     # atribui um novo nome caso o nome inserido já conste como key em um dicionário. Evita sobreposição de dados.
     def set_nomeRepetido(self, novoNome):
         self.nome = novoNome
         return self.nome
-    
+
     # Data e hora:
     def horaeData(self, data_hora_cadastro):
         self.data_hora_cadastro = data_hora_cadastro
-        data_hora_cadastro = datetime.now()
         return data_hora_cadastro
 
     def reunirRespostas(self, nome, idade, sexo, resposta1, resposta2, resposta3, resposta4, resposta5, data_hora_cadastro):
         resposta = {nome: [idade, sexo, resposta1, resposta2,
                            resposta3, resposta4, resposta5, data_hora_cadastro]}
         return resposta
+
+    # Pessoal, acho que para gerar o dataframe o dicionario precisa estar nesse formado aqui em baixo, pois cada chave vira uma coluna
+    # Deixei aqui em baixo comentado de sugestão para quando tiver a parte de gerar o csv a gente testar, tudo bem?
+
+    # def reunirRespostas(self, nome, idade, sexo, resposta1, resposta2, resposta3, resposta4, data_hora_cadastro):
+    #     resposta = {'Nome': nome,
+    #                 'Idade': idade,
+    #                 'Gênero': sexo,
+    #                 'Resposta 1': resposta1,
+    #                 'Resposta 2': resposta2,
+    #                 'Resposta 3': resposta3,
+    #                 'Resposta 4': resposta4,
+    #                 'Data e hora': data_hora_cadastro}
+    #     return resposta
 
     def pyToCSV(self, respostas):
         return  # arquivo csv
