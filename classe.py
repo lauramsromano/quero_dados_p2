@@ -1,3 +1,4 @@
+from itertools import filterfalse
 import pandas as pd
 
 
@@ -86,5 +87,21 @@ class Entrevistador():
                     'Data e hora': data_hora_cadastro}
         return resposta
 
-    def pyToCSV(self, respostas):
-        return  # arquivo csv
+
+    def verificarCsv():
+        try:
+            arquivo = pd.read_csv('resultados.csv', sep=';')
+            return arquivo
+
+        except:
+            columas = ['Nome', 'Idade', 'Gênero', 'Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4', 'Resposta 5', 'Data a hora']
+            arquivo = pd.DataFrame(columns= columas, inplece= True)
+            arquivo.to_csv('resultados.csv', sep=';', index=False)
+            return verificarCsv()
+
+
+    def pyToCsv(self, respostas):
+        dados = verificarCsv()
+        dados = pd.concat([dados, pd.DataFrame.from_records(respostas)])
+        dados = dados.append(respostas, ignore_index=True)
+        dados.to_csv('resultados.csv', sep=';', index=filterfalse)

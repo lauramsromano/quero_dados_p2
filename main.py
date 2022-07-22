@@ -57,6 +57,7 @@ while True: #tem que corrigir esse while
         respostas.append(resposta)
     
     else:
+        
         break
 
 print(respostas)
