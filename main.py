@@ -4,18 +4,22 @@ from datetime import datetime
 
 aceite = bool
 respostas = {}
+# Pelo que verifiquei para conseguir gerar o dataframe dá mais certo se juntar os dict em uma lista.
+# Deixei aqui em baixo comentado de sugestão para quando tiver a parte de gerar o csv a gente testar, tudo bem?
+# respostas = []
 
 while classe.Entrevistador.desejaParticipar(aceite) == True:
 
-    nome = str(input("Digite seu nome: ")) #não é necesário
+    nome = str(input("Digite seu nome: "))  # não é necesário
     idade = int(input('Digite sua idade: '))
     if idade > 00:
-        sexo = int(input('Digite o número relacionado ao gênero no qual você se identifica: [1] Feminino\n [2] Não binário\n [3] Masculino\n'))
+        sexo = int(input(
+            'Digite o número relacionado ao gênero no qual você se identifica: [1] Feminino\n [2] Não binário\n [3] Masculino\n'))
 
-    elif idade == 00: #mover para o final
+    elif idade == 00:  # mover para o final
         print('Fim do questionário')
         Break
-    
+
     sexo = 'F'
     resposta2 = 'b'
     resposta4 = 'd'
@@ -43,12 +47,12 @@ while classe.Entrevistador.desejaParticipar(aceite) == True:
     # instanciamento do objeto entrevistado
     entrevistado = classe.Entrevistador(
         nome, idade, sexo, resposta1, resposta2, resposta3, resposta4, input5, data_hora_cadastro)
-    
+
     # atribui os valores fornecidos (1, 2 ou 3) à variável resposta como Sim, Não ou Não Sei.
     resposta1 = entrevistado.set_pergunta1(input1)
     resposta3 = entrevistado.set_pergunta3(input3)
     resposta5 = entrevistado.set_pergunta5(input5)
-    
+
     # inclui a hora em que o cadastro da resposta foi feito.
     data_hora_cadastro = entrevistado.horaeData(data_hora_cadastro)
 
