@@ -78,7 +78,7 @@ class Entrevistador():
     # verificar se já existe um arquivo .csv
     def verificarCsv(self):
         try:
-            arquivo = pd.read_csv('resultados.csv', sep=';')
+            arquivo = pd.read_csv('resultados.csv')
             return arquivo
 
         except:
@@ -91,6 +91,5 @@ class Entrevistador():
     # transformar a lista de respostas em um dataframe e, em seguida, gerar ou adicionar ao arquivo .csv já existente
     def pyToCsv(self, respostas):
         dados = self.verificarCsv()
-        #dados = pd.concat([dados, pd.DataFrame.from_records(respostas)])
         dados = dados.append(respostas, ignore_index=True)
         dados.to_csv('resultados.csv', index=False)
