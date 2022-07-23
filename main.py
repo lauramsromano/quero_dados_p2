@@ -1,17 +1,24 @@
-from ast import Break
+
 import classe
 from datetime import datetime
 
 respostas = []
-idade = int
+idade = ''
+condicao = True
 
-while True: #tem que corrigir esse while
-    idade = int(input('Digite sua idade: '))
-    
-    if idade != 00:
-        nome = str(input("Digite seu nome: "))
+while condicao:
+    print('----------')
+
+    idade = input('Digite sua idade: ')
+    if idade == '00':
+        condicao = False
+
+    if condicao == True:
+        nome = input("Digite seu nome: ")
         sexo = int(input(
-                'Digite o número relacionado ao gênero no qual você se identifica: [1] Feminino\n [2] Não binário\n [3] Masculino\n'))
+            'Digite o número relacionado ao gênero no qual você se identifica:\n [1] Feminino\n [2] Masculino\n [3] Não binário\n'))
+
+        print('----------')
 
         input2 = 'b'
         input4 = 'd'
@@ -37,27 +44,26 @@ while True: #tem que corrigir esse while
         data_hora_cadastro = datetime.now()
 
         # instanciamento do objeto entrevistado
-        entrevistado = classe.Entrevistador(
-            nome, idade, sexo, input1, input2, input3, input4, input5, data_hora_cadastro)
+        entrevistado = classe.Entrevistador(nome, idade, data_hora_cadastro)
 
-        # atribui os valores fornecidos (1, 2 ou 3) à variável resposta como Sim, Não ou Não Sei.
-        resposta1 = entrevistado.set_pergunta1(input1)
+        # atribui os valores fornecidos (1, 2 ou 3) à variável resposta como Sim, Não e Não sei responder, respectivamente.
+        resposta1 = entrevistado.pergunta1(input1)
         resposta2 = 'b'
-        resposta3 = entrevistado.set_pergunta3(input3)
+        resposta3 = entrevistado.pergunta3(input3)
         resposta4 = 'a'
-        resposta5 = entrevistado.set_pergunta5(input5)
+        resposta5 = entrevistado.pergunta5(input5)
 
-        # inclui a hora em que o cadastro da resposta foi feito.
-        data_hora_cadastro = entrevistado.horaeData(data_hora_cadastro)
+        # atribuir o valor (1,2 ou 3) à variável resposta como Feminino, Masculino e Não binário, respectivamente.
+        sexo = entrevistado.dadosSexo(sexo)
 
         # cria um dicionário para cada entrevistado
-        resposta = entrevistado.reunirRespostas(nome, idade, sexo, resposta1, resposta2, resposta3, resposta4, resposta5, data_hora_cadastro)
-        
-        # cria a lista de respostas
+        resposta = entrevistado.reunirRespostas(
+            nome, idade, sexo, resposta1, resposta2, resposta3, resposta4, resposta5, data_hora_cadastro)
+
+        # cria a lista de respostas com os dicionários dos entrevistados
         respostas.append(resposta)
-    
+
     else:
-        
-        break
+        print('Pesquisa finalizada! Obrigada por participar!')
 
 print(respostas)
