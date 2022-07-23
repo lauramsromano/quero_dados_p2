@@ -88,7 +88,7 @@ class Entrevistador():
         return resposta
 
 
-    def verificarCsv():
+    def verificarCsv(self):
         try:
             arquivo = pd.read_csv('resultados.csv', sep=';')
             return arquivo
@@ -97,11 +97,11 @@ class Entrevistador():
             columas = ['Nome', 'Idade', 'Gênero', 'Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4', 'Resposta 5', 'Data a hora']
             arquivo = pd.DataFrame(columns= columas, inplece= True)
             arquivo.to_csv('resultados.csv', sep=';', index=False)
-            return verificarCsv()
+            return self.verificarCsv()
 
 
     def pyToCsv(self, respostas):
-        dados = verificarCsv()
+        dados = self.verificarCsv()
         dados = pd.concat([dados, pd.DataFrame.from_records(respostas)])
         dados = dados.append(respostas, ignore_index=True)
         dados.to_csv('resultados.csv', sep=';', index=filterfalse)
