@@ -65,5 +65,6 @@ while condicao:
 
     else:
         print('Pesquisa finalizada! Obrigada por participar!')
+        entrevistado.pyToCsv(respostas)
 
 print(respostas)

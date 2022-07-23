@@ -83,14 +83,14 @@ class Entrevistador():
 
         except:
             columas = ['Nome', 'Idade', 'Gênero', 'Resposta 1', 'Resposta 2',
-                       'Resposta 3', 'Resposta 4', 'Resposta 5', 'Data a hora']
-            arquivo = pd.DataFrame(columns=columas, inplece=True)
-            arquivo.to_csv('resultados.csv', sep=';', index=False)
+                       'Resposta 3', 'Resposta 4', 'Resposta 5', 'Data e hora']
+            arquivo = pd.DataFrame(columns=columas)
+            arquivo.to_csv('resultados.csv', index=False)
             return self.verificarCsv()
 
     # transformar a lista de respostas em um dataframe e, em seguida, gerar ou adicionar ao arquivo .csv já existente
     def pyToCsv(self, respostas):
         dados = self.verificarCsv()
-        dados = pd.concat([dados, pd.DataFrame.from_records(respostas)])
+        #dados = pd.concat([dados, pd.DataFrame.from_records(respostas)])
         dados = dados.append(respostas, ignore_index=True)
-        dados.to_csv('resultados.csv', sep=';', index=filterfalse)
+        dados.to_csv('resultados.csv', index=False)

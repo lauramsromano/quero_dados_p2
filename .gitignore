@@ -3,5 +3,4 @@ __pycache__/
 
 # Distribution / packaging
 .pytest_cache
-Include/
-venv/
+toCsv/
