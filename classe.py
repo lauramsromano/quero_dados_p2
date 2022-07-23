@@ -4,23 +4,18 @@ import pandas as pd
 
 class Entrevistador():
 
-    def __init__(self, nome, idade, sexo, resposta1, resposta2, resposta3, resposta4, resposta5, data_hora_cadastro):
+    # removi todos as variáveis que tem métodos próprios do INIT, pois não precisa declarar elas duas vezes
+    def __init__(self, nome, idade, data_hora_cadastro):
         self.nome = nome
         self.idade = idade
-        self.sexo = sexo
-        self.resposta1 = resposta1
-        self.resposta2 = resposta2
-        self.resposta3 = resposta3
-        self.resposta4 = resposta4
-        self.resposta5 = resposta5
         self.data_hora_cadastro = data_hora_cadastro
 
-    def dadosBasicos(self, nome, idade, sexo):
-        self.nome = nome
-        self.idade = idade
+    # receber um valor (ou letra) e devolver "Feminino", "Masculino" ou "Não Binário"
+    def dadosSexo(self, sexo):
         self.sexo = sexo
         # return self.dadosBasicos
 
+    # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não sei responder".
     def pergunta1(self, resposta1):
         if resposta1 == 1:
             self.resposta1 = "Sim"
@@ -33,8 +28,9 @@ class Entrevistador():
             return self.resposta1
 
     def pergunta2(self):
-        return  # resposta 2: Sim, Não, Não Sei
+        return  # resposta 2: Sim, Não, Não sei responder
 
+    # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não sei responder".
     def pergunta3(self, resposta3):
         if resposta3 == 1:
             self.resposta3 = "Sim"
@@ -46,10 +42,11 @@ class Entrevistador():
             self.resposta3 = "Não sei responder"
             return self.resposta3
 
+    # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não sei responder".
     def pergunta4(self):
-        return  # resposta 4: Sim, Não, Não Sei
+        return  # resposta 4: Sim, Não, Não sei responder
 
-    # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não Sei".
+    # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não sei responder".
     def pergunta5(self, resposta5):
         if resposta5 == 1:
             self.resposta5 = "Sim"
@@ -61,20 +58,11 @@ class Entrevistador():
             self.resposta5 = "Não"
             return self.resposta5
 
-    def reunirRespostas(self, nome, idade, sexo, resposta1, resposta2, resposta3, resposta4, resposta5):
-        resposta = {nome: [idade, sexo, resposta1,
-                           resposta2, resposta3, resposta4, resposta5]}
-        return resposta
-
+    # acessar o nome de um entrevistado
     def get_nome(self):
         return self.nome
 
-    # Data e hora:
-    def horaeData(self, data_hora_cadastro):
-        self.data_hora_cadastro = data_hora_cadastro
-        return data_hora_cadastro
-
-
+    # reuniar as respostas do entrevistado e criar um dicionário
     def reunirRespostas(self, nome, idade, sexo, resposta1, resposta2, resposta3, resposta4, resposta5, data_hora_cadastro):
         resposta = {'Nome': nome,
                     'Idade': idade,
@@ -87,19 +75,20 @@ class Entrevistador():
                     'Data e hora': data_hora_cadastro}
         return resposta
 
-
+    # verificar se já existe um arquivo .csv
     def verificarCsv(self):
         try:
             arquivo = pd.read_csv('resultados.csv', sep=';')
             return arquivo
 
         except:
-            columas = ['Nome', 'Idade', 'Gênero', 'Resposta 1', 'Resposta 2', 'Resposta 3', 'Resposta 4', 'Resposta 5', 'Data a hora']
-            arquivo = pd.DataFrame(columns= columas, inplece= True)
+            columas = ['Nome', 'Idade', 'Gênero', 'Resposta 1', 'Resposta 2',
+                       'Resposta 3', 'Resposta 4', 'Resposta 5', 'Data a hora']
+            arquivo = pd.DataFrame(columns=columas, inplece=True)
             arquivo.to_csv('resultados.csv', sep=';', index=False)
             return self.verificarCsv()
 
-
+    # transformar a lista de respostas em um dataframe e, em seguida, gerar ou adicionar ao arquivo .csv já existente
     def pyToCsv(self, respostas):
         dados = self.verificarCsv()
         dados = pd.concat([dados, pd.DataFrame.from_records(respostas)])
