@@ -16,30 +16,42 @@ while condicao:
     if condicao == True:
         nome = input("Digite seu nome: ")
         sexo = int(input(
-            'Digite o número relacionado ao gênero no qual você se identifica:\n [1] Feminino\n [2] Masculino\n [3] Não binário\n'))
+            'Digite o número relacionado ao gênero no qual você se identifica:\n [1] - Feminino\n [2] - Masculino\n [3] - Não binário\n'))
 
         print('----------')
 
-        input2 = 'b'
-        input4 = 'd'
+        input1 = int(input(
+            'Pergunta 1: Pergunta\n [1] - Sim\n [2] - Não\n [3]- Não sei responder\n Digite a opção que melhor se aplica:'))
 
-        input1 = int(input(f'''Essa é uma pergunta teste. 
-        1 - Sim
-        2 - Não 
-        3 - Não sei responder
-        Digite a opção que melhor se aplica: '''))
+        input2 = int(input(
+            'Pergunta 1: Pergunta\n [1] - Sim\n [2] - Não\n [3]- Não sei responder\n Digite a opção que melhor se aplica:'))
 
-        input3 = int(input(f'''Essa é uma pergunta teste. 
-        1 - Sim
-        2 - Não 
-        3 - Não sei responder
-        Digite a opção que melhor se aplica: '''))
+        input3 = int(input(
+            'Pergunta 1: Pergunta\n [1] - Sim\n [2] - Não\n [3]- Não sei responder\n Digite a opção que melhor se aplica:'))
 
-        input5 = int(input(f'''Essa é uma pergunta teste. 
-        1 - Sim
-        2 - Não Sei
-        3 - Não
-        Digite a opção que melhor se aplica: '''))
+        input4 = int(input(
+            'Pergunta 1: Pergunta\n [1] - Sim\n [2] - Não\n [3]- Não sei responder\n Digite a opção que melhor se aplica:'))
+
+        input5 = int(input(
+            'Pergunta 1: Pergunta\n [1] - Sim\n [2] - Não\n [3]- Não sei responder\n Digite a opção que melhor se aplica:'))
+
+        # input1 = int(input(f''' Você possui computador em casa?
+        # 1 - Sim
+        # 2 - Não
+        # 3 - Não sei responder
+        # Digite a opção que melhor se aplica: '''))
+
+        # input3 = int(input(f'''Essa é uma pergunta teste.
+        # 1 - Sim
+        # 2 - Não
+        # 3 - Não sei responder
+        # Digite a opção que melhor se aplica: '''))
+
+        # input5 = int(input(f'''Essa é uma pergunta teste.
+        # 1 - Sim
+        # 2 - Não Sei
+        # 3 - Não
+        # Digite a opção que melhor se aplica: '''))
 
         data_hora_cadastro = datetime.now()
 
