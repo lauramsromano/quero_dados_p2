@@ -24,16 +24,16 @@ while condicao:
             'Pergunta 1: Pergunta\n [1] - Sim\n [2] - Não\n [3]- Não sei responder\n Digite a opção que melhor se aplica:'))
 
         input2 = int(input(
-            'Pergunta 1: Pergunta\n [1] - Sim\n [2] - Não\n [3]- Não sei responder\n Digite a opção que melhor se aplica:'))
+            'Pergunta 2: \n [1] - Sim\n [2] - Não\n [3]- Não sei responder\n Digite a opção que melhor se aplica:'))
 
         input3 = int(input(
-            'Pergunta 1: Pergunta\n [1] - Sim\n [2] - Não\n [3]- Não sei responder\n Digite a opção que melhor se aplica:'))
+            'Pergunta 3: Pergunta\n [1] - Sim\n [2] - Não\n [3]- Não sei responder\n Digite a opção que melhor se aplica:'))
 
         input4 = int(input(
-            'Pergunta 1: Pergunta\n [1] - Sim\n [2] - Não\n [3]- Não sei responder\n Digite a opção que melhor se aplica:'))
+            'Pergunta 4: Pergunta\n [1] - Sim\n [2] - Não\n [3]- Não sei responder\n Digite a opção que melhor se aplica:'))
 
         input5 = int(input(
-            'Pergunta 1: Pergunta\n [1] - Sim\n [2] - Não\n [3]- Não sei responder\n Digite a opção que melhor se aplica:'))
+            'Pergunta 5: Pergunta\n [1] - Sim\n [2] - Não\n [3]- Não sei responder\n Digite a opção que melhor se aplica:'))
 
         # input1 = int(input(f''' Você possui computador em casa?
         # 1 - Sim
@@ -60,9 +60,9 @@ while condicao:
 
         # atribui os valores fornecidos (1, 2 ou 3) à variável resposta como Sim, Não e Não sei responder, respectivamente.
         resposta1 = entrevistado.pergunta1(input1)
-        resposta2 = 'b'
+        resposta2 = entrevistado.pergunta2(input2)
         resposta3 = entrevistado.pergunta3(input3)
-        resposta4 = 'a'
+        resposta4 = entrevistado.pergunta4(input4)
         resposta5 = entrevistado.pergunta5(input5)
 
         # atribuir o valor (1,2 ou 3) à variável resposta como Feminino, Masculino e Não binário, respectivamente.
