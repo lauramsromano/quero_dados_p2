@@ -27,8 +27,17 @@ class Entrevistador():
             self.resposta1 = "Não sei responder"
             return self.resposta1
 
-    def pergunta2(self):
-        return  # resposta 2: Sim, Não, Não sei responder
+    # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não sei responder".
+    def pergunta2(self, resposta2):
+        if resposta2 == 1:
+            self.resposta2 = "Sim"
+            return self.resposta3
+        elif resposta2 == 2:
+            self.resposta2 = "Não"
+            return self.resposta2
+        elif resposta2 == 3:
+            self.resposta2 = "Não sei responder"
+            return self.resposta2
 
     # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não sei responder".
     def pergunta3(self, resposta3):
@@ -43,8 +52,16 @@ class Entrevistador():
             return self.resposta3
 
     # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não sei responder".
-    def pergunta4(self):
-        return  # resposta 4: Sim, Não, Não sei responder
+    def pergunta4(self, resposta4):
+        if resposta4 == 1:
+            self.resposta4 = "Sim"
+            return self.resposta4
+        elif resposta4 == 2:
+            self.resposta4 = "Não"
+            return self.resposta4
+        elif resposta4 == 3:
+            self.resposta4 = "Não sei responder"
+            return self.resposta4
 
     # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não sei responder".
     def pergunta5(self, resposta5):
