@@ -20,20 +20,35 @@ while condicao:
 
         print('----------')
 
-        input2 = 'b'
-        input4 = 'd'
-
         input1 = int(input(f'''Essa é uma pergunta teste. 
         1 - Sim
         2 - Não 
         3 - Não sei responder
         Digite a opção que melhor se aplica: '''))
+        
+
+        input2 = int(input('''
+        Você acha que empresas como a Resilia, focadas no ensino da tecnologia e empregabilidade, ajudam a 
+        diminuir a Exclusão Digital no Brasil? 
+
+        [1] Sim
+        [2] Não
+        [3] Não sei dizer
+        Digite a opção que melhor se aplica:   '''))
 
         input3 = int(input(f'''Essa é uma pergunta teste. 
         1 - Sim
         2 - Não 
         3 - Não sei responder
         Digite a opção que melhor se aplica: '''))
+
+        input4 = int(input('''
+        Você acha que negros e pardos têm menos acesso à internet e à inclusão digital no Brasil? 
+
+        [1] Sim
+        [2] Não
+        [3] Não sei dizer
+        Digite a opção que melhor se aplica:   '''))
 
         input5 = int(input(f'''Essa é uma pergunta teste. 
         1 - Sim
