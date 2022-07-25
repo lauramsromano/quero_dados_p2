@@ -37,7 +37,7 @@ class Entrevistador():
     def pergunta2(self, resposta2):
         if resposta2 == 1:
             self.resposta2 = "Sim"
-            return self.resposta3
+            return self.resposta2
         elif resposta2 == 2:
             self.resposta2 = "Não"
             return self.resposta2
