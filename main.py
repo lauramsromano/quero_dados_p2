@@ -20,19 +20,19 @@ while condicao:
         print('----------')
 
         input1 = int(input(
-            'Pergunta 1: Pergunta\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+            'Pergunta 1: Você tem acesso à internet banda larga em casa?\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
 
         input2 = int(input(
-            'Pergunta 2: \n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+            'Pergunta 2: Você utiliza computador ou notebook em casa para acesso à internet?\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
 
         input3 = int(input(
-            'Pergunta 3: Pergunta\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+            'Pergunta 3: Você utiliza celular (ou tablet) para acesso à internet?\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
 
         input4 = int(input(
-            'Pergunta 4: Pergunta\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+            'Pergunta 4: Você precisa da internet para fins educacionais? (aula/curso)\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
 
         input5 = int(input(
-            'Pergunta 5: Pergunta\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+            'Pergunta 5: A conexão da sua internet é estável? (não desconecta com frequencia)\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
 
         data_hora_cadastro = datetime.now()
 
