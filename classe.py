@@ -116,3 +116,34 @@ class Entrevistador():
         dados = self.verificarCsv()
         dados = dados.append(respostas, ignore_index=True)
         dados.to_csv('resultados.csv', index=False)
+
+    #verifica se as respostas são numeros entre 1 e 3 :
+    def validaResposta(self, resposta):
+        while True:
+            try:
+                resposta = int(resposta)
+                if  resposta  < 1 or resposta > 3:
+                    raise ValueError ('Insira apenas números entre 1 e 3. ')
+            except ValueError as e:
+                print(e)
+                resposta = input('Digite novamente: ')
+            else:
+                break
+        return resposta
+    
+    def validaIdade(self, idade):
+        if idade == 00:
+            return idade
+        while True:
+            try:
+                idade = int(idade)
+                if idade < 00 or idade > 110:
+                    raise ValueError ('Insira uma faixa atária válida, entre 1 e 110 anos. ')
+            except ValueError as e:
+                print(e)
+                idade = input('Digite novamente: ')
+            else:
+                break
+        return idade
+
+            

@@ -9,6 +9,8 @@ while condicao:
     print('----------')
 
     idade = input('Digite sua idade: ')
+    idade = classe.Entrevistador.validaIdade(classe.Entrevistador, idade)
+
     if idade == '00':
         condicao = False
 
@@ -16,23 +18,29 @@ while condicao:
         nome = input("Digite seu nome: ")
         sexo = int(input(
             'Digite o número relacionado ao gênero no qual você se identifica:\n [1] - Feminino\n [2] - Masculino\n [3] - Não binário: '))
+        sexo = classe.Entrevistador.validaResposta(classe.Entrevistador, sexo)
 
         print('----------')
 
-        input1 = int(input(
-            'Pergunta 1: Você tem acesso à internet banda larga em casa?\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+        input1 = (input(
+            '---------- \n Pergunta 1: Você tem acesso à internet banda larga em casa?\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+        input1 = classe.Entrevistador.validaResposta(classe.Entrevistador, input1)
 
         input2 = int(input(
-            'Pergunta 2: Você utiliza computador ou notebook em casa para acesso à internet?\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+            '---------- \n Pergunta 2: Você utiliza computador ou notebook em casa para acesso à internet?\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+        input2 = classe.Entrevistador.validaResposta(classe.Entrevistador, input2)
 
         input3 = int(input(
-            'Pergunta 3: Você utiliza celular (ou tablet) para acesso à internet?\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+            '---------- \n Pergunta 3: Você utiliza celular (ou tablet) para acesso à internet?\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+        input3 = classe.Entrevistador.validaResposta(classe.Entrevistador, input3)
 
         input4 = int(input(
-            'Pergunta 4: Você precisa da internet para fins educacionais? (aula/curso)\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+            '---------- \n Pergunta 4: Você precisa da internet para fins educacionais? (aula/curso)\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+        input4 = classe.Entrevistador.validaResposta(classe.Entrevistador, input4)
 
         input5 = int(input(
-            'Pergunta 5: A conexão da sua internet é estável? (não desconecta com frequencia)\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+            '---------- \n Pergunta 5: A conexão da sua internet é estável? (não desconecta com frequencia)\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
+        input5 = classe.Entrevistador.validaResposta(classe.Entrevistador, input5)
 
         data_hora_cadastro = datetime.now()
 
