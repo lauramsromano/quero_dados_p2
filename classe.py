@@ -10,10 +10,17 @@ class Entrevistador():
         self.idade = idade
         self.data_hora_cadastro = data_hora_cadastro
 
-    # receber um valor (ou letra) e devolver "Feminino", "Masculino" ou "Não Binário"
+    # receber um valor e devolver "Feminino", "Masculino" ou "Não Binário"
     def dadosSexo(self, sexo):
-        self.sexo = sexo
-        # return self.dadosBasicos
+        if sexo == 1:
+            self.sexo == "Feminino"
+            return self.sexo
+        elif sexo == 2: 
+            self.sexo == "Masculino"
+            return self.sexo
+        elif sexo == 3:
+            self.sexo == "Não Binário"
+            return self.sexo
 
     # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não sei responder".
     def pergunta1(self, resposta1):
