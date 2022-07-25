@@ -1,28 +1,27 @@
-from itertools import filterfalse
 import pandas as pd
 
 
 class Entrevistador():
 
-    # removi todos as variáveis que tem métodos próprios do INIT, pois não precisa declarar elas duas vezes
+    # atributos inicias da classe
     def __init__(self, nome, idade, data_hora_cadastro):
         self.nome = nome
         self.idade = idade
         self.data_hora_cadastro = data_hora_cadastro
 
-    # receber um valor e devolver "Feminino", "Masculino" ou "Não Binário"
+    # receber um valor entre 1 e 3 e devolver "Feminino", "Masculino" ou "Não Binário"
     def dadosSexo(self, sexo):
         if sexo == 1:
-            self.sexo == "Feminino"
+            self.sexo = "Feminino"
             return self.sexo
-        elif sexo == 2: 
-            self.sexo == "Masculino"
+        elif sexo == 2:
+            self.sexo = "Masculino"
             return self.sexo
         elif sexo == 3:
-            self.sexo == "Não Binário"
+            self.sexo = "Não Binário"
             return self.sexo
 
-    # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não sei responder".
+    # recebe um valor entre 1 e 3 e devolver "Sim", "Não" ou "Não sei responder".
     def pergunta1(self, resposta1):
         if resposta1 == 1:
             self.resposta1 = "Sim"
@@ -34,7 +33,7 @@ class Entrevistador():
             self.resposta1 = "Não sei responder"
             return self.resposta1
 
-    # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não sei responder".
+    # recebe um valor entre 1 e 3 e devolver "Sim", "Não" ou "Não sei responder".
     def pergunta2(self, resposta2):
         if resposta2 == 1:
             self.resposta2 = "Sim"
@@ -46,7 +45,7 @@ class Entrevistador():
             self.resposta2 = "Não sei responder"
             return self.resposta2
 
-    # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não sei responder".
+    # recebe um valor entre 1 e 3 e devolver "Sim", "Não" ou "Não sei responder".
     def pergunta3(self, resposta3):
         if resposta3 == 1:
             self.resposta3 = "Sim"
@@ -58,7 +57,7 @@ class Entrevistador():
             self.resposta3 = "Não sei responder"
             return self.resposta3
 
-    # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não sei responder".
+    # recebe um valor entre 1 e 3 e devolver "Sim", "Não" ou "Não sei responder".
     def pergunta4(self, resposta4):
         if resposta4 == 1:
             self.resposta4 = "Sim"
@@ -70,7 +69,7 @@ class Entrevistador():
             self.resposta4 = "Não sei responder"
             return self.resposta4
 
-    # recebe um valor entre 1 e 3 e devolve "Sim", "Não" ou "Não sei responder".
+    # recebe um valor entre 1 e 3 e devolver "Sim", "Não" ou "Não sei responder".
     def pergunta5(self, resposta5):
         if resposta5 == 1:
             self.resposta5 = "Sim"
@@ -104,15 +103,15 @@ class Entrevistador():
         try:
             arquivo = pd.read_csv('resultados.csv')
             return arquivo
-
+        # caso não tenha o arquivo, criar um dataframe e, em seguida, criar o arquivo .csv
         except:
-            columas = ['Nome', 'Idade', 'Gênero', 'Resposta 1', 'Resposta 2',
+            colunas = ['Nome', 'Idade', 'Gênero', 'Resposta 1', 'Resposta 2',
                        'Resposta 3', 'Resposta 4', 'Resposta 5', 'Data e hora']
-            arquivo = pd.DataFrame(columns=columas)
+            arquivo = pd.DataFrame(columns=colunas)
             arquivo.to_csv('resultados.csv', index=False)
             return self.verificarCsv()
 
-    # transformar a lista de respostas em um dataframe e, em seguida, gerar ou adicionar ao arquivo .csv já existente
+    # receber as informações da lista de dicionários e adicionar ao arquivo .csv
     def pyToCsv(self, respostas):
         dados = self.verificarCsv()
         dados = dados.append(respostas, ignore_index=True)
