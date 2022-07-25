@@ -15,7 +15,7 @@ while condicao:
     if condicao == True:
         nome = input("Digite seu nome: ")
         sexo = int(input(
-            'Digite o número relacionado ao gênero no qual você se identifica:\n [1] - Feminino\n [2] - Masculino\n [3] - Não binário: '))
+            'Em qual opção de gênero você se identifica:\n [1] - Feminino\n [2] - Masculino\n [3] - Não binário:\n Digite a opção que voce se identifica: '))
 
         print('----------')
 
