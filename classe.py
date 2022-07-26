@@ -90,12 +90,12 @@ class Entrevistador():
         resposta = {'Nome': nome,
                     'Idade': idade,
                     'Gênero': sexo,
-                    'Resposta 1': resposta1,
-                    'Resposta 2': resposta2,
-                    'Resposta 3': resposta3,
-                    'Resposta 4': resposta4,
-                    'Resposta 5': resposta5,
-                    'Data e hora': data_hora_cadastro}
+                    'Resposta_1': resposta1,
+                    'Resposta_2': resposta2,
+                    'Resposta_3': resposta3,
+                    'Resposta_4': resposta4,
+                    'Resposta_5': resposta5,
+                    'Data_e_hora': data_hora_cadastro}
         return resposta
 
     # verificar se já existe um arquivo .csv
@@ -105,8 +105,8 @@ class Entrevistador():
             return arquivo
         # caso não tenha o arquivo, criar um dataframe e, em seguida, criar o arquivo .csv
         except:
-            colunas = ['Nome', 'Idade', 'Gênero', 'Resposta 1', 'Resposta 2',
-                       'Resposta 3', 'Resposta 4', 'Resposta 5', 'Data e hora']
+            colunas = ['Nome', 'Idade', 'Gênero', 'Resposta_1', 'Resposta_2',
+                       'Resposta_3', 'Resposta_4', 'Resposta_5', 'Data_e_hora']
             arquivo = pd.DataFrame(columns=colunas)
             arquivo.to_csv('resultados.csv', index=False)
             return self.verificarCsv()
