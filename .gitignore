@@ -1,5 +1,5 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
+classes/__pycache__/
 
 # Distribution / packaging
 .pytest_cache

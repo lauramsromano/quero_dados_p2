@@ -1,4 +1,4 @@
-import classe
+import classes.classe as classe
 from datetime import datetime
 
 respostas = []
