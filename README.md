@@ -31,6 +31,6 @@ git clone https://github.com/lauramsromano/QUERO_DADOS.git
 
 - [Ana Carolina Moralles](https://github.com/amoralles)
 - [Bruno Guedes da Silva](https://github.com/Brunosill)
-- [Diego de Souza Ferreira](https://github.com/karoline-juliana)
-- [João Vitor Rosa](https://github.com/MatheusB2002)
-- [Laura Maria de Souza Romano](https://github.com/joaorosa2)
+- [Diego de Souza Ferreira](https://github.com/D20go)
+- [João Vitor Rosa](https://github.com/joaorosa2)
+- [Laura Maria de Souza Romano](https://github.com/lauramsromano)
