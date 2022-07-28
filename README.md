@@ -16,7 +16,7 @@ e foram utilizadas as bilbiotecas Pandas e Date time.
 - [Python](https://www.python.org/)
 - [VSCode](https://code.visualstudio.com/)
 
-### <strong>Como executar:</strong>
+### :gear: <strong>Como executar:</strong>
 1º Clone o repositório abaixo:
 ```shell
 git clone https://github.com/lauramsromano/QUERO_DADOS.git
