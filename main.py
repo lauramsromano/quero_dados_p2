@@ -11,12 +11,12 @@ while condicao:
     idade = input('Digite sua idade (para finalizar o programa, digite 00): ')
     idade = classe.Entrevistado.validaIdade(classe.Entrevistado, idade)
 
-    if idade == '00':
+    if idade == 00:
         condicao = False
 
     if condicao == True:
         nome = input("Digite seu nome: ")
-        sexo = int(input(
+        sexo = (input(
             'Digite o número relacionado ao gênero no qual você se identifica:\n [1] - Feminino\n [2] - Masculino\n [3] - Não binário: '))
         sexo = classe.Entrevistado.validaResposta(classe.Entrevistado, sexo)
 
@@ -27,22 +27,22 @@ while condicao:
         input1 = classe.Entrevistado.validaResposta(
             classe.Entrevistado, input1)
 
-        input2 = int(input(
+        input2 = (input(
             '---------- \n Pergunta 2: Você utiliza computador ou notebook em casa para acesso à internet?\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
         input2 = classe.Entrevistado.validaResposta(
             classe.Entrevistado, input2)
 
-        input3 = int(input(
+        input3 = (input(
             '---------- \n Pergunta 3: Você utiliza celular (ou tablet) para acesso à internet?\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
         input3 = classe.Entrevistado.validaResposta(
             classe.Entrevistado, input3)
 
-        input4 = int(input(
+        input4 = (input(
             '---------- \n Pergunta 4: Você precisa da internet para fins educacionais? (aula/curso)\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
         input4 = classe.Entrevistado.validaResposta(
             classe.Entrevistado, input4)
 
-        input5 = int(input(
+        input5 = (input(
             '---------- \n Pergunta 5: A conexão da sua internet é estável? (não desconecta com frequencia)\n [1] - Sim\n [2] - Não\n [3] - Não sei responder\n Digite a opção que melhor se aplica: '))
         input5 = classe.Entrevistado.validaResposta(
             classe.Entrevistado, input5)
