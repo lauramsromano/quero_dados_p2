@@ -9,6 +9,7 @@ while condicao:
     print('----------')
 
     idade = input('Digite sua idade (para finalizar o programa, digite 00): ')
+    idade = classe.Entrevistado.validaIdade(classe.Entrevistado, idade)
 
     if idade == '00':
         condicao = False
