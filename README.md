@@ -21,7 +21,7 @@ e foram utilizadas as bilbiotecas Pandas e Date time.
 ```shell
 git clone https://github.com/lauramsromano/QUERO_DADOS.git
 ```
-2º Abra os arquivos "classe.py" e "main.py" com uma IDE de sua preferência; <br/>
+2º Abra os arquivos "main.py" com uma IDE de sua preferência; <br/>
 3º Execute o arquivo "main.py", para isso procure pelo comando 'run python file' ou similar; <br/>
 4º A partir do terminal, interaja com o programa respondendo as peguntas conforme solicitado.<br/>
 5º Verifique a criação do arquivo .csv na pasta de origem.
